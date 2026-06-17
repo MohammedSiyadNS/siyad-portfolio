@@ -57,7 +57,7 @@ export default function Footer() {
       {/* Top Glow */}
       
 
-      <div className="max-w-7xl mx-auto px-6 py-10">
+      <div className="max-w-7xl mx-auto relative z-10 px-6 py-10">
 
         <div className="grid md:grid-cols-3 gap-10">
 
