@@ -32,7 +32,7 @@ export default function Hero() {
       {/* Purple Gradient */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#050816]/90 via-[#050816]/40 to-transparent"></div>
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-  {[...Array(40)].map((_, i) => (
+  {[...Array(20)].map((_, i) => (
     <motion.span
       key={i}
       className="absolute w-1.5 h-1.5 bg-purple-400 rounded-full animate-pulse shadow-[0_0_12px_rgba(168,85,247,0.8)]"
@@ -81,7 +81,7 @@ export default function Hero() {
             Hello Recruiter 👋
           </span>
 
-          <h1 className="mt-6 text-5xl md:text-7xl font-extrabold leading-tight tracking-tight">
+          <h1 className="mt-6 text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
   <span className="text-white">
     Mohammed
   </span>
@@ -103,7 +103,7 @@ export default function Hero() {
 
           {/* Buttons */}
           <motion.div
-            className="flex flex-wrap gap-4 mt-8"
+            className="flex flex-col sm:flex-row gap-4 mt-6"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

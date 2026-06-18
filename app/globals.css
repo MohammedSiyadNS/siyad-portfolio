@@ -103,3 +103,12 @@ html {
   border: 1px solid rgba(255,255,255,0.05);
   pointer-events: none;
 }
+html,
+body {
+  overflow-x: hidden !important;
+  width: 100%;
+  max-width: 100vw;
+}
+* {
+  box-sizing: border-box;
+}

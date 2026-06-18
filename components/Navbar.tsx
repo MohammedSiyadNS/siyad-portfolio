@@ -1,9 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Menu, X } from "lucide-react";
+
 
 export default function Navbar() {
   const [active, setActive] = useState("home");
+  const [isOpen,setIsOpen] = useState(false);
 
   useEffect(() => {
     const sections = [
@@ -134,25 +137,70 @@ export default function Navbar() {
         </ul>
 
         {/* Button */}
-        <a
-          href = "#contact"
-          className="
-            bg-purple-600
-            hover:bg-purple-500
-            hover:shadow-[0_0_25px_rgba(168,85,247,0.8)]
-            hover:scale-105
-            transition-all
-            duration-300
-            px-5
-            py-2
-            rounded-xl
-            font-medium
-          "
-        >
-          Let's Talk 
-        </a>
+        
+        <div className="flex items-center gap-3">
+
+          <a
+            href="#contact"
+            className="
+              bg-purple-600
+              hover:bg-purple-500
+              hover:shadow-[0_0_25px_rgba(168,85,247,0.8)]
+              hover:scale-105
+              transition-all
+              duration-300
+              px-5
+              py-2
+              rounded-xl
+              font-medium
+            "
+          >
+            Let's Talk
+          </a>
+
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden text-white"
+          >
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+
+        </div>
 
       </div>
+      {isOpen && (
+  <div className="md:hidden bg-[#050816]/95 backdrop-blur-xl border-t border-white/10">
+
+    <div className="flex flex-col items-center py-6 gap-6">
+
+      <a href="#home" onClick={() => setIsOpen(false)}>
+        Home
+      </a>
+
+      <a href="#about" onClick={() => setIsOpen(false)}>
+        About
+      </a>
+
+      <a href="#skills" onClick={() => setIsOpen(false)}>
+        Skills
+      </a>
+
+      <a href="#projects" onClick={() => setIsOpen(false)}>
+        Projects
+      </a>
+
+      <a href="#experience" onClick={() => setIsOpen(false)}>
+        Experience
+      </a>
+
+      <a href="#contact" onClick={() => setIsOpen(false)}>
+        Contact
+      </a>
+
+    </div>
+
+  </div>
+)}
     </nav>
   );
 }

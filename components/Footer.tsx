@@ -20,7 +20,7 @@ export default function Footer() {
 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-purple-500/5 rounded-full blur-[150px]" />
  {/* Floating Particles */}
 <div className="absolute inset-0 overflow-hidden pointer-events-none">
-  {[...Array(40)].map((_, i) => (
+  {[...Array(20)].map((_, i) => (
     <motion.span
       key={i}
       className="absolute w-1.5 h-1.5 bg-purple-400 rounded-full animate-pulse shadow-[0_0_12px_rgba(168,85,247,0.8)]"
@@ -59,7 +59,7 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto relative z-10 px-6 py-10">
 
-        <div className="grid md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
           {/* Logo & About */}
           <div>

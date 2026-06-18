@@ -32,7 +32,7 @@ export default function Skills() {
 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-purple-500/5 rounded-full blur-[150px]" />
  {/* Floating Particles */}
 <div className="absolute inset-0 overflow-hidden pointer-events-none">
-  {[...Array(40)].map((_, i) => (
+  {[...Array(20)].map((_, i) => (
     <motion.span
       key={i}
       className="absolute w-1.5 h-1.5 bg-purple-400 rounded-full animate-pulse shadow-[0_0_12px_rgba(168,85,247,0.8)]"
@@ -67,15 +67,15 @@ export default function Skills() {
 </div>
 {/* Floating Tech Icons */}
 
-<div className="absolute top-24 left-10 text-cyan-400/60 text-8xl animate-slow">
+<div className="hidden md:block absolute top-24 left-10 text-cyan-400/60 text-8xl animate-slow">
   <SiReact />
 </div>
 
-<div className="absolute top-24 right-10 text-white/50 text-7xl animate-slow">
+<div className=" hidden md:block absolute top-24 right-10 text-white/50 text-7xl animate-slow">
   <SiNextdotjs />
 </div>
 
-<div className="absolute top-1/2 left-5 text-yellow-400/50 text-7xl animate-slow">
+<div className="hidden md:block absolute top-1/2 left-5 text-yellow-400/50 text-7xl animate-slow">
   <SiPython />
 </div>
 
@@ -83,11 +83,11 @@ export default function Skills() {
   <SiGithub />
 </div>
 
-<div className="absolute bottom-20 right-10 text-blue-400/70 text-7xl animate-slow">
+<div className="hidden md:block absolute bottom-20 right-10 text-blue-400/70 text-7xl animate-slow">
   <SiMysql />
 </div>
 
-<div className="absolute top-1/2 right-5 text-cyan-300/60 text-7xl animate-slow">
+<div className="hidden md:block absolute top-1/2 right-5 text-cyan-300/60 text-7xl animate-slow">
   <SiTailwindcss />
 </div>
       <div className="max-w-7xl mx-auto">

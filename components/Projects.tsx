@@ -56,7 +56,7 @@ export default function Projects() {
 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-purple-500/5 rounded-full blur-[150px]" />
  {/* Floating Particles */}
 <div className="absolute inset-0 overflow-hidden pointer-events-none">
-  {[...Array(40)].map((_, i) => (
+  {[...Array(20)].map((_, i) => (
     <motion.span
       key={i}
       className="absolute w-1.5 h-1.5 bg-purple-400 rounded-full animate-pulse shadow-[0_0_12px_rgba(168,85,247,0.8)]"
@@ -135,14 +135,18 @@ export default function Projects() {
             <div
               key={index}
               className="
-                  min-w-[350px]
-                  max-w-[350px]
+                  min-w-[280px]
+                  sm:min-w-[320px]
+                  md:min-w-[350px]
+                  max-w-[280px]
+                  sm:max-w-[320px]
+                  md:max-w-[350px]
                   snap-center
                   bg-white/[0.03]
                   border
                   border-purple-500/20
                   rounded-3xl
-                  p-6
+                  p-4
                   backdrop-blur-xl
                   transition-all
                   duration-300
@@ -153,7 +157,7 @@ export default function Projects() {
             >
 
               {/* Preview */}
-              <div className="h-48 rounded-2xl overflow-hidden bg-gradient-to-br from-purple-500/20 to-black border border-purple-500/20 mb-6">
+              <div className="h-36 md:h-48 rounded-2xl overflow-hidden bg-gradient-to-br from-purple-500/20 to-black border border-purple-500/20 mb-6">
 
                   <img
                     src={project.image}
@@ -167,7 +171,7 @@ export default function Projects() {
                 {project.title}
               </h3>
 
-              <p className="text-gray-400 leading-7 mb-6">
+              <p className="text-sm md:text-base line clamp-3 text-gray-400 leading-7 mb-6">
                 {project.description}
               </p>
 

@@ -28,7 +28,7 @@ export default function About() {
   
   {/* Floating Particles */}
 <div className="absolute inset-0 overflow-hidden pointer-events-none">
-  {[...Array(40)].map((_, i) => (
+  {[...Array(20)].map((_, i) => (
     <motion.span
       key={i}
       className="absolute w-1.5 h-1.5 bg-purple-400 rounded-full animate-pulse shadow-[0_0_12px_rgba(168,85,247,0.8)]"
@@ -148,7 +148,7 @@ export default function About() {
               {/* Stats */}
 <div className="grid grid-cols-4 gap-3 mt-8 pt-6 border-t border-purple-500/20">
 
-  <div className="glass cardtext-center bg-white/[0.03] border border-purple-500/20 rounded-xl p-4 backdrop-blur-xl">
+  <div className="glass-card text-center bg-white/[0.03] border border-purple-500/20 rounded-xl p-4 backdrop-blur-xl">
     <h3 className="text-3xl font-bold bg-gradient-to-r from-purple-300 to-purple-500 bg-clip-text text-transparent">
   5+
 </h3>
